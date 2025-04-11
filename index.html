@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Restaturan web page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar"> <!-- Navigation bar container -->
+    <div class="navbar-container container"> <!-- Flex container for navbar items -->
+      <ul class="menu-items"> <!-- Unordered list for menu items -->
+        <li><a href="#home">Home</a></li> <!-- Link to the home section -->
+        <li><a href="#food">Category</a></li> <!-- Link to the food category section -->
+        <li><a href="#food-menu">Menu</a></li> <!-- Link to the food menu section -->
+        <li><a href="#testimonials">Testimonial</a></li> <!-- Link to the testimonials section -->
+        <li><a href="#contact">Contact</a></li> <!-- Link to the contact section -->
+      </ul>
+      <div class="bar-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <h1 class="logo">DeveloperGTM</h1> <!-- Logo of the restaurant -->
+    </div>
+  </nav>
+
+   <!-- Banner Section -->
+   <section class="showcase-area" id="showcase"> <!-- Showcase area for the main banner -->
+    <div class="showcase-container"> <!-- Container for the showcase content -->
+      <h1 class="main-title" id="home">Eat Right Food</h1> <!-- Main title of the banner -->
+      <p>Eat Healthy, it is good for our health.</p> <!-- Subtitle for the banner -->
+      <a href="#food-menu" class="btn btn-primary">MENU</a> <!-- Button linking to the food menu section -->
+    </div>
+  </section>
+
+  
+  <!-- Food Category Section -->
+  <section id="food"> <!-- Section for food categories -->
+    <h2>Types of food</h2> <!-- Heading for the food types -->
+
+    <!-- Fruit Category -->
+    <div class="food-container container"> <!-- Container for food types -->
+      <div class="food-type fruit"> <!-- Fruit category -->
+        <div class="img-container"> <!-- Container for the image and content -->
+
+          <!-- Asynchronous image loading for better performance -->
+          <!-- Image source -->
+          <!-- Alt text for the image -->
+          <img decoding="async" src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+          <div class="img-content"> <!-- Content overlay for the image -->
+            <h3>Fruit</h3> <!-- Title for the fruit category -->
+            <!-- Link to learn more about vegetables -->
+            <!-- Button styling -->
+            <!-- Opens link in a new tab -->
+            <!-- Security feature to prevent access to the original page -->
+            <a href="https://en.wikipedia.org/wiki/Vegetable" class="btn btn-primary" target="blank"
+              rel="noopener">learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vegetable Category -->
+      <div class="food-type vegetable"> <!-- Vegetable category -->
+        <div class="img-container"> <!-- Container for the image and content -->
+          <img decoding="async" src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+          <div class="img-content"> <!-- Content overlay for the image -->
+            <h3>vegetable</h3> <!-- Title for the vegetable category -->
+            <a href="https://en.wikipedia.org/wiki/Vegetable" class="btn btn-primary" target="blank"
+              rel="noopener">learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grain Category -->
+      <div class="food-type grin"> <!-- Grain category -->
+        <div class="img-container"> <!-- Container for the image and content -->
+          <img decoding="async" src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+          <div class="img-content"> <!-- Content overlay for the image -->
+            <h3>grin</h3> <!-- Title for the grain category -->
+            <a href="https://en.wikipedia.org/wiki/Grain" class="btn btn-primary" target="blank" rel="noopener">learn
+              more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Food Menu Section -->
+  <section id="food-menu"> <!-- Section for the food menu -->
+    <h2 class="food-menu-heading">Food Menu</h2> <!-- Heading for the food menu -->
+    <div class="food-menu-container container"> <!-- Container for food menu items -->
+      <div class="food-menu-item"> <!-- Individual food menu item -->
+        <div class="food-img"> <!-- Container for the food image -->
+          <img decoding="async"
+            src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="" />
+        </div>
+        <div class="food-description"> <!-- Container for food description -->
+          <h2 class="food-titile">Food Menu Item 1</h2> <!-- Title for the food item -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            quae.
+          </p> <!-- Description of the food item -->
+          <p class="food-price">Price: &#8377; 250</p> <!-- Price of the food item -->
+        </div>
+      </div>
+      <div class="food-menu-item"> <!-- Another food menu item -->
+        <div class="food-img"> <!-- Container for the food image -->
+          <img decoding="async"
+            src="https://plus.unsplash.com/premium_photo-1691030658788-41d188eabb64?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="error" />
+        </div>
+        <div class="food-description"> <!-- Container for food description -->
+          <h2 class="food-titile">Food Menu Item 2</h2> <!-- Title for the food item -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            quae.
+          </p>
+          <p class="food-price">Price: &#8377; 250</p> <!-- Price of the food item -->
+        </div>
+      </div>
+      <div class="food-menu-item"> <!-- Another food menu item -->
+        <div class="food-img"> <!-- Container for the food image -->
+          <img decoding="async"
+            src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="" />
+        </div>
+        <div class="food-description"> <!-- Container for food description -->
+          <h2 class="food-titile">Food Menu Item 3</h2> <!-- Title for the food item -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            quae.
+          </p>
+          <p class="food-price">Price: &#8377; 250</p> <!-- Price of the food item -->
+        </div>
+      </div>
+      <div class="food-menu-item"> <!-- Another food menu item -->
+        <div class="food-img"> <!-- Container for the food image -->
+          <img decoding="async"
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D"
+            alt="" />
+        </div>
+        <div class="food-description"> <!-- Container for food description -->
+          <h2 class="food-titile">Food Menu Item 4</h2> <!-- Title for the food item -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            quae.
+          </p>
+          <p class="food-price">Price: &#8377; 250</p> <!-- Price of the food item -->
+        </div>
+      </div>
+      <div class="food-menu-item"> <!-- Another food menu item -->
+        <div class="food-img"> <!-- Container for the food image -->
+          <img decoding="async"
+            src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D"
+            alt="" />
+        </div>
+        <div class="food-description"> <!-- Container for food description -->
+          <h2 class="food-titile">Food Menu Item 5</h2> <!-- Title for the food item -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            quae.
+          </p>
+          <p class="food-price">Price: &#8377; 250</p> <!-- Price of the food item -->
+        </div>
+      </div>
+      <div class="food-menu-item"> <!-- Another food menu item -->
+        <div class="food-img"> <!-- Container for the food image -->
+          <img decoding="async"
+            src="https://plus.unsplash.com/premium_photo-1691030658159-e8e29b2b12b9?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D"
+            alt="" />
+        </div>
+        <div class="food-description"> <!-- Container for food description -->
+          <h2 class="food-titile">Food Menu Item 6</h2> <!-- Title for the food item -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            quae.
+          </p>
+          <p class="food-price">Price: &#8377; 250</p> <!-- Price of the food item -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section id="testimonials"> <!-- Section for customer testimonials -->
+    <h2 class="testimonial-title">What Our Customers Say</h2> <!-- Heading for testimonials -->
+    <div class="testimonial-container container"> <!-- Container for testimonial items -->
+      <div class="testimonial-box"> <!-- Individual testimonial box -->
+        <div class="customer-detail"> <!-- Container for customer details -->
+          <div class="customer-photo"> <!-- Container for customer photo -->
+            <img decoding="async" src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg" alt="" />
+            <p class="customer-name">Ross Lee</p> <!-- Customer name -->
+          </div>
+        </div>
+        <div class="star-rating"> <!-- Container for star ratings -->
+          <span class="fa fa-star checked"></span> <!-- Star icon for rating -->
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <p class="testimonial-text"> <!-- Testimonial text -->
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+          voluptas cupiditate aspernatur odit doloribus non.
+        </p>
+      </div>
+      <div class="testimonial-box"> <!-- Another testimonial box -->
+        <div class="customer-detail"> <!-- Container for customer details -->
+          <div class="customer-photo"> <!-- Container for customer photo -->
+            <img decoding="async" src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg" alt="" />
+            <p class="customer-name">Amelia Watson</p> <!-- Customer name -->
+          </div>
+        </div>
+        <div class="star-rating"> <!-- Container for star ratings -->
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <p class="testimonial-text"> <!-- Testimonial text -->
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+          voluptas cupiditate aspernatur odit doloribus non.
+        </p>
+      </div>
+      <div class="testimonial-box"> <!-- Another testimonial box -->
+        <div class="customer-detail"> <!-- Container for customer details -->
+          <div class="customer-photo"> <!-- Container for customer photo -->
+            <img decoding="async" src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg" alt="" />
+            <p class="customer-name">Ben Roy</p> <!-- Customer name -->
+          </div>
+        </div>
+        <div class="star-rating"> <!-- Container for star ratings -->
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+        <p class="testimonial-text"> <!-- Testimonial text -->
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+          voluptas cupiditate aspernatur odit doloribus non.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact"> <!-- Section for contact form -->
+    <div class="contact-container container"> <!-- Container for contact content -->
+      <div class="contact-img"> <!-- Container for contact image -->
+        <img decoding="async"
+          src="https://plus.unsplash.com/premium_photo-1661772253149-48ec033cf4b7?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMGZvb2QlMjBnaXJsc3xlbnwwfHwwfHx8MA%3D%3D"
+          alt="" />
+      </div>
+      <div class="form-container"> <!-- Container for the contact form -->
+        <h2>Contact Us</h2> <!-- Heading for the contact form -->
+        <textarea cols="30" rows="6"></textarea> <!-- Textarea for user input -->
+        <a href="#" class="btn btn-primary">Submit</a> <!-- Submit button -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer"> <!-- Footer container -->
+    <h2>Restaurant &copy; all rights reserved</h2> <!-- Footer text -->
+  </footer>
+</body>
+
+</html>
