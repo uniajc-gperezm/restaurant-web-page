@@ -1,3 +1,45 @@
+:root {
+  --background-color: #fff;
+  --text-color: #444;
+  --primary-color: black;
+  --secondary-color: green;
+  --accent-color: #117964;
+  --light-gray-color: #aaa;
+  --very-light-gray-color: #f0f0f0;
+  --white-color: #fff;
+  --black-color: black;
+  --chocolate-color: chocolate;
+  --whitesmoke-color: whitesmoke;
+  --dark-text-color: #555;
+  --star-color: #ff9529;
+  --contact-bg-color: rgb(226, 226, 226);
+  --image-overlay-color: rgba(0, 0, 0, 0.871);
+  --gradient-start-color: rgba(240, 240, 240, 0.144);
+  --gradient-end-color: rgba(255, 255, 255, 0.336);
+  --box-shadow-color: rgba(149, 157, 165, 0.2);
+}
+
+.dark-mode {
+  --background-color: #333;
+  --text-color: #f0f0f0;
+  --primary-color: #ddd; /* A light color for dark background */
+  --secondary-color: #2e8b57; /* SeaGreen - a bit lighter for dark mode */
+  --accent-color: #50c878; /* Emerald - for hover/accent */
+  --light-gray-color: #555; /* Darker gray for dark mode */
+  --very-light-gray-color: #444; /* Even darker gray */
+  --white-color: #222; /* Represents what was white, now dark */
+  --black-color: #fff; /* Represents what was black, now light */
+  --chocolate-color: #d2691e; /* Chocolate, should be fine or adjust if too dark */
+  --whitesmoke-color: #2b2b2b; /* Darker background for elements that were whitesmoke */
+  --dark-text-color: #ccc; /* Lighter text for dark backgrounds */
+  --star-color: #ff9529; /* Keep stars bright */
+  --contact-bg-color: #222; /* Dark background for contact section */
+  --image-overlay-color: rgba(255, 255, 255, 0.15); /* Lighter overlay for dark mode */
+  --gradient-start-color: rgba(0, 0, 0, 0.3); /* Darker gradient for showcase */
+  --gradient-end-color: rgba(50, 50, 50, 0.5); /* Darker gradient for showcase */
+  --box-shadow-color: rgba(255, 255, 255, 0.05); /* Lighter shadow for dark mode */
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -13,6 +55,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   /* Sets the font family for the body */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 
@@ -40,21 +84,21 @@ body {
 }
 
 .btn-primary {
-  color: #fff;
+  color: var(--white-color);
   /* Sets text color for primary button */
-  background: black;
+  background: var(--primary-color);
   /* Sets background color for primary button */
 }
 
 .btn-secundary {
-  color: #fff;
+  color: var(--white-color);
   /* Sets text color for secondary button */
-  background: green;
+  background: var(--secondary-color);
   /* Sets background color for secondary button */
 }
 
 .btn-primary:hover {
-  background: #117964;
+  background: var(--accent-color);
   /* Changes background color on hover */
   transition: all 0.3s ease-in-out;
   /* Smooth transition for hover effect */
@@ -72,13 +116,13 @@ body {
 }
 
 .navbar {
-  box-shadow: 37px -42px 10px 37px #aaa;
+  box-shadow: 37px -42px 10px 37px var(--light-gray-color);
   /* Adds shadow effect to the navbar */
   /* Fixes the navbar at the top of the viewport */
   /* position: fixed; */
   width: 100%;
   /* Sets width to 100% */
-  background: #fff;
+  background: var(--background-color);
   /* Sets background color for navbar */
   /* Sets height for navbar */
   height: 70px;
@@ -124,7 +168,7 @@ body {
 .menu-items a {
   text-decoration: none;
   /* Removes underline from links */
-  color: #444;
+  color: var(--text-color);
   /* Sets text color for links */
   font-weight: 500;
   /* Sets font weight for links */
@@ -144,9 +188,9 @@ body {
 .showcase-area {
   height: 50vh;
   /* Sets height for the showcase area */
-  background: linear-gradient(rgba(240, 240, 240, 0.144),
+  background: linear-gradient(var(--gradient-start-color),
       /* Gradient color */
-      rgba(255, 255, 255, 0.336)
+      var(--gradient-end-color)
       /* Gradient color */
     ), url("http://alturl.com/79qx5");
   /* Background image */
@@ -183,12 +227,12 @@ body {
   /* Adds top margin */
   font-size: 4rem;
   /* Sets font size for the main title */
-  color: chocolate;
+  color: var(--chocolate-color);
   /* Sets text color for the main title */
 }
 
 .showcase-container p {
-  color: #fff;
+  color: var(--white-color); /* This was #fff, assuming text over an image/gradient */
   /* Sets text color for paragraph */
   margin: 0 1.5rem;
 }
@@ -209,7 +253,7 @@ body {
   /* Adds bottom margin */
   text-transform: uppercase;
   /* Transforms text to uppercase */
-  color: black;
+  color: var(--black-color);
   /* Sets text color */
   font-weight: 700;
   /* Sets font weight */
@@ -266,7 +310,7 @@ body {
 }
 
 .img-content h3 {
-  color: #fff;
+  color: var(--white-color); /* Text on image overlay */
   /* Sets text color for the heading */
   font-size: 2.2rem;
   /* Sets font size for the heading */
@@ -292,7 +336,7 @@ body {
   /* Sets width to 100% */
   height: 100%;
   /* Sets height to 100% */
-  background: rgba(0, 0, 0, 0.871);
+  background: var(--image-overlay-color);
   /* Semi-transparent black background */
   opacity: 0;
   /* Hides the pseudo-element initially */
@@ -322,7 +366,7 @@ body {
 
 /* Food Menu Section */
 #food-menu {
-  background-color: whitesmoke;
+  background-color: var(--whitesmoke-color);
   /* Sets background color for the food menu */
   padding-top: 4rem;
   /* Adds top padding */
@@ -333,7 +377,7 @@ body {
   /* Centers the heading */
   font-size: 3.4rem;
   /* Sets font size for the heading */
-  color: black;
+  color: var(--black-color);
   /* Sets text color */
   font-weight: 700;
   /* Sets font weight */
@@ -384,21 +428,21 @@ body {
   /* Sets font size for the title */
   font-weight: 400;
   /* Sets font weight */
-  color: #444;
+  color: var(--text-color);
   /* Sets text color */
 }
 
 .food-description p {
   font-size: 1.4rem;
   /* Sets font size for description */
-  color: #555;
+  color: var(--dark-text-color);
   /* Sets text color */
   font-weight: 500;
   /* Sets font weight */
 }
 
 .food-description .food-price {
-  color: #117964;
+  color: var(--accent-color);
   /* Sets color for the price */
   font-weight: 700;
   /* Sets font weight for the price */
@@ -408,7 +452,7 @@ body {
 #testimonials {
   padding: 4rem 0;
   /* Adds vertical padding */
-  background-color: white;
+  background-color: var(--background-color);
   /* Sets background color */
 }
 
@@ -417,7 +461,7 @@ body {
   /* Centers the heading */
   font-size: 2.8rem;
   /* Sets font size for the heading */
-  color: black;
+  color: var(--black-color);
   /* Sets text color */
   font-weight: 700;
   /* Sets font weight */
@@ -435,14 +479,14 @@ body {
 }
 
 .testimonial-box .checked {
-  color: #ff9529;
+  color: var(--star-color);
   /* Sets color for checked stars */
 }
 
 .testimonial-box .testimonial-text {
   margin: 1rem 0;
   /* Adds vertical margin */
-  color: #444;
+  color: var(--text-color);
   /* Sets text color */
 }
 
@@ -451,7 +495,7 @@ body {
   /* Centers text */
   padding: 20px;
   /* Adds padding */
-  background-color: white;
+  background-color: var(--white-color);
   /* Sets background color */
   border-radius: 10px;
   /* Rounds corners */
@@ -461,7 +505,7 @@ body {
   /* Stacks items vertically */
   row-gap: 10px;
   /* Adds space between rows */
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--box-shadow-color) 0px 8px 24px;
   /* Adds shadow effect */
 }
 
@@ -492,14 +536,14 @@ body {
 #contact {
   padding: 4rem 0;
   /* Adds vertical padding */
-  background: rgb(226, 226, 226);
+  background: var(--contact-bg-color);
   /* Sets background color */
 }
 
 .contact-container {
   display: flex;
   /* Uses flexbox for layout */
-  background: #fff;
+  background: var(--background-color);
   /* Sets background color */
   border-radius: 10px;
   /* Rounds corners */
@@ -554,19 +598,19 @@ body {
   /* Removes outline */
   /* margin-bottom: 1rem; */
   /* Adds bottom margin */
-  color: #444;
+  color: var(--text-color);
   /* Sets text color */
   font-weight: 500;
   /* Sets font weight */
-  background: whitesmoke;
+  background: var(--whitesmoke-color);
   /* Sets background color */
   padding: 10px;
   /* Adds left padding */
-  border: 1px solid;
+  border: 1px solid; /* Consider using a variable for border color if it needs to change */
   /* Adds border */
   border-radius: 10px;
   /* Rounds corners */
-  color: #444;
+  color: var(--text-color);
   /* Sets text color */
   resize: none;
   /* Prevents resizing of the textarea */
@@ -575,7 +619,7 @@ body {
 .form-container h2 {
   font-size: 2.7rem;
   /* Sets font size for the heading */
-  color: black;
+  color: var(--black-color);
   /* Sets text color */
   font-weight: 700;
   /* Sets font weight */
@@ -595,9 +639,9 @@ body {
   /* Adds padding */
   font-weight: 500;
   /* Sets font weight */
-  color: black;
+  color: var(--black-color);
   /* Sets text color */
-  background: white;
+  background: var(--background-color);
   /* Sets background color */
 }
 
@@ -649,7 +693,7 @@ body {
   .contact-container {
     display: flex;
     /* Uses flexbox for layout */
-    background: #fff;
+    background: var(--background-color);
     /* Sets background color */
     border-radius: 10px;
     /* Rounds corners */
@@ -687,13 +731,13 @@ body {
     border: none;
     box-shadow: none;
     outline: none;
-    color: #444;
+    color: var(--text-color);
     font-weight: 500;
-    background: whitesmoke;
+    background: var(--whitesmoke-color);
     padding-left: 20px;
-    border: 1px solid;
+    border: 1px solid; /* Consider a variable for border color */
     border-radius: 10px;
-    color: #444;
+    color: var(--text-color);
     resize: none;
     margin: 0px;
     padding: 10px;
