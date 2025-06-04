@@ -21,7 +21,7 @@
         <li><a href="#testimonials">Testimonial</a></li> <!-- Link to the testimonials section -->
         <li><a href="#contact">Contact</a></li> <!-- Link to the contact section -->
       </ul>
-      <button id="darkModeToggle" style="padding: 5px 10px; margin-left: 15px;">Toggle Dark Mode</button> <!-- Dark Mode Toggle Button -->
+      <i class="fas fa-moon" id="darkModeIcon"></i> <!-- Dark Mode Toggle Icon -->
       <div class="bar-icon">
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -274,19 +274,23 @@
   </footer>
 
   <script>
-    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
     const body = document.body;
     const DARK_MODE_KEY = 'darkMode';
 
     // Function to apply dark mode
     const enableDarkMode = () => {
       body.classList.add('dark-mode');
+      darkModeIcon.classList.remove('fa-moon');
+      darkModeIcon.classList.add('fa-sun');
       localStorage.setItem(DARK_MODE_KEY, 'enabled');
     }
 
     // Function to disable dark mode
     const disableDarkMode = () => {
       body.classList.remove('dark-mode');
+      darkModeIcon.classList.remove('fa-sun');
+      darkModeIcon.classList.add('fa-moon');
       localStorage.setItem(DARK_MODE_KEY, 'disabled');
     }
 
@@ -294,12 +298,12 @@
     if (localStorage.getItem(DARK_MODE_KEY) === 'enabled') {
       enableDarkMode();
     } else {
-      // Optional: default to light mode if no preference or it's 'disabled'
+      // Default to light mode if no preference or it's 'disabled'
       disableDarkMode();
     }
 
-    // Toggle dark mode on button click
-    darkModeToggle.addEventListener('click', () => {
+    // Toggle dark mode on icon click
+    darkModeIcon.addEventListener('click', () => {
       if (body.classList.contains('dark-mode')) {
         disableDarkMode();
       } else {
