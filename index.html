@@ -21,6 +21,7 @@
         <li><a href="#testimonials">Testimonial</a></li> <!-- Link to the testimonials section -->
         <li><a href="#contact">Contact</a></li> <!-- Link to the contact section -->
       </ul>
+      <button id="darkModeToggle" style="padding: 5px 10px; margin-left: 15px;">Toggle Dark Mode</button> <!-- Dark Mode Toggle Button -->
       <div class="bar-icon">
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -271,6 +272,41 @@
   <footer id="footer"> <!-- Footer container -->
     <h2>Restaurant &copy; all rights reserved</h2> <!-- Footer text -->
   </footer>
+
+  <script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const DARK_MODE_KEY = 'darkMode';
+
+    // Function to apply dark mode
+    const enableDarkMode = () => {
+      body.classList.add('dark-mode');
+      localStorage.setItem(DARK_MODE_KEY, 'enabled');
+    }
+
+    // Function to disable dark mode
+    const disableDarkMode = () => {
+      body.classList.remove('dark-mode');
+      localStorage.setItem(DARK_MODE_KEY, 'disabled');
+    }
+
+    // Check for saved user preference on page load
+    if (localStorage.getItem(DARK_MODE_KEY) === 'enabled') {
+      enableDarkMode();
+    } else {
+      // Optional: default to light mode if no preference or it's 'disabled'
+      disableDarkMode();
+    }
+
+    // Toggle dark mode on button click
+    darkModeToggle.addEventListener('click', () => {
+      if (body.classList.contains('dark-mode')) {
+        disableDarkMode();
+      } else {
+        enableDarkMode();
+      }
+    });
+  </script>
 </body>
 
 </html>
