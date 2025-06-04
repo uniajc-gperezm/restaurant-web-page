@@ -38,6 +38,15 @@
   --gradient-start-color: rgba(0, 0, 0, 0.3); /* Darker gradient for showcase */
   --gradient-end-color: rgba(50, 50, 50, 0.5); /* Darker gradient for showcase */
   --box-shadow-color: rgba(255, 255, 255, 0.05); /* Lighter shadow for dark mode */
+
+  /* Specific adjustments for dark mode */
+  .showcase-container p {
+    color: #fff; /* Ensure showcase paragraph text is white in dark mode */
+  }
+
+  .img-container::after {
+    background: rgba(0, 0, 0, 0.871); /* Keep original overlay color in dark mode */
+  }
 }
 
 * {
@@ -181,6 +190,15 @@ body {
   /* Sets font size for the logo */
   /* Adds bottom margin to the logo */
   /* margin-bottom: 0.5rem;  */
+}
+
+#darkModeIcon {
+  color: var(--text-color);
+  font-size: 1.6rem; /* Adjust as needed, similar to menu items or slightly larger */
+  margin-left: 1.5rem; /* Spacing from menu items or logo */
+  cursor: pointer;
+  order: 3; /* To place it after menu items */
+  align-self: center; /* Explicitly align if needed */
 }
 
 
@@ -673,7 +691,13 @@ body {
   } */
 
   .menu-items {
-    display: none;
+    display: none; /* Menu items are hidden, icon should still be visible */
+  }
+
+  /* Ensure icon is visible and correctly ordered when menu items are hidden */
+  #darkModeIcon {
+    order: 2; /* After logo (order 1) when menu-items (order 2 originally) are hidden */
+    /* margin-left can remain, or adjust if it looks off without menu items */
   }
 
   .food-menu-container img {
