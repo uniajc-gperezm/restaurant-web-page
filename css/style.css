@@ -700,6 +700,12 @@ body {
     /* margin-left can remain, or adjust if it looks off without menu items */
   }
 
+  .main-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1em 0 0 0;
+  }
+
   .food-menu-container img {
     width: 150px;
     height: 150px;
@@ -751,20 +757,19 @@ body {
 
   .form-container textarea {
     display: block;
-    width: 97%;
-    border: none;
+    width: 100%;
+    border: 1px solid; /* Consider a variable for border color */
     box-shadow: none;
     outline: none;
     color: var(--text-color);
     font-weight: 500;
     background: var(--whitesmoke-color);
-    padding-left: 20px;
-    border: 1px solid; /* Consider a variable for border color */
     border-radius: 10px;
     color: var(--text-color);
     resize: none;
     margin: 0px;
     padding: 10px;
+    box-sizing: border-box;
   }
 
   #footer h2 {
