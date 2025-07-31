@@ -46,7 +46,7 @@
     <!-- Fruit Category -->
     <div class="food-container container"> <!-- Container for food types -->
       <div class="food-type fruit"> <!-- Fruit category -->
-        <div class="img-container"> <!-- Container for the image and content -->
+        <div class="img-container food-image-container"> <!-- Container for the image and content -->
 
           <!-- Asynchronous image loading for better performance -->
           <!-- Image source -->
@@ -66,7 +66,7 @@
 
       <!-- Vegetable Category -->
       <div class="food-type vegetable"> <!-- Vegetable category -->
-        <div class="img-container"> <!-- Container for the image and content -->
+        <div class="img-container food-image-container"> <!-- Container for the image and content -->
           <img decoding="async" src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
           <div class="img-content"> <!-- Content overlay for the image -->
             <h3>vegetable</h3> <!-- Title for the vegetable category -->
@@ -78,7 +78,7 @@
 
       <!-- Grain Category -->
       <div class="food-type grin"> <!-- Grain category -->
-        <div class="img-container"> <!-- Container for the image and content -->
+        <div class="img-container food-image-container"> <!-- Container for the image and content -->
           <img decoding="async" src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
           <div class="img-content"> <!-- Content overlay for the image -->
             <h3>grin</h3> <!-- Title for the grain category -->
@@ -308,6 +308,37 @@
         disableDarkMode();
       } else {
         enableDarkMode();
+      }
+    });
+
+    // Food image container animation
+    const foodImageContainers = document.querySelectorAll('.food-image-container');
+
+    foodImageContainers.forEach(container => {
+      container.addEventListener('click', () => {
+        // Remove active class from all other containers
+        foodImageContainers.forEach(otherContainer => {
+          if (otherContainer !== container) {
+            otherContainer.classList.remove('active');
+          }
+        });
+        // Toggle active class on the clicked container
+        container.classList.toggle('active');
+      });
+    });
+
+    // Close the active container when clicking outside
+    document.addEventListener('click', (event) => {
+      let isClickInside = false;
+      foodImageContainers.forEach(container => {
+        if (container.contains(event.target)) {
+          isClickInside = true;
+        }
+      });
+      if (!isClickInside) {
+        foodImageContainers.forEach(container => {
+          container.classList.remove('active');
+        });
       }
     });
   </script>

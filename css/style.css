@@ -372,18 +372,20 @@ body {
   /* Smooth transition for scaling */
 }
 
-.img-container:hover::after {
+.img-container:hover::after,
+.img-container.active::after {
   opacity: 1;
-  /* Shows the pseudo-element on hover */
+  /* Shows the pseudo-element on hover or click */
   transform: scaleY(1);
-  /* Scales the element to full size on hover */
+  /* Scales the element to full size on hover or click */
 }
 
-.img-container:hover .img-content {
+.img-container:hover .img-content,
+.img-container.active .img-content {
   opacity: 1;
-  /* Shows the content on hover */
+  /* Shows the content on hover or click */
   top: 40%;
-  /* Adjusts position on hover */
+  /* Adjusts position on hover or click */
 }
 
 /* Food Menu Section */
@@ -791,13 +793,4 @@ body {
     margin: 20px auto;
   }
 
-  .img-container::after {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-
-  .img-container .img-content {
-    opacity: 1;
-    top: 40%;
-  }
 }
