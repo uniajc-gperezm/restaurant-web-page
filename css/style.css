@@ -47,6 +47,10 @@
   .img-container::after {
     background: rgba(0, 0, 0, 0.871); /* Keep original overlay color in dark mode */
   }
+
+  .img-content h3 {
+    color: #fff;
+  }
 }
 
 * {
@@ -785,5 +789,15 @@ body {
 
   .food-type {
     margin: 20px auto;
+  }
+
+  .img-container::after {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .img-container .img-content {
+    opacity: 1;
+    top: 40%;
   }
 }
